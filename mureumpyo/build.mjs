@@ -6,3 +6,6 @@ await writeFile('dist/server/index.js', `const HTML = ${JSON.stringify(html)};\n
 await cp('.openai/hosting.json', 'dist/.openai/hosting.json');
 await cp('drizzle', 'dist/.openai/drizzle', { recursive: true });
 console.log('Build ready: dist/server/index.js');
+await mkdir('public', { recursive: true });
+await mkdir('public', { recursive: true });
+await writeFile('public/index.html', html);
